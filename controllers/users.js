@@ -36,7 +36,7 @@ const handleUserLogin = async (req, res) => {
 
         // Stateless Authentication
         const token = setUserToken(user);
-        res.cookie("userCookie", token);
+        res.cookie("token", token);
         return res.redirect("/");
     } catch (err) {
         return res.status(500).json({
